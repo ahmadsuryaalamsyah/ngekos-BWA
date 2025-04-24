@@ -26,4 +26,20 @@ class BoardingHouse extends Model
     public function category () {
         return $this->belongsTo(Category::class);
     }
+
+    public function rooms () {
+        return $this->hasMany(Room::class);
+    }
+
+    public function testimonials () {
+        return $this->hasMany(Testimonial::class);
+    }
+
+    public function bonuses () {
+        return $this->hasMany(Bonus::class);
+    }
+
+    public function transactions () {
+        return $this->hasMany(Transaction::class);
+    }
 }

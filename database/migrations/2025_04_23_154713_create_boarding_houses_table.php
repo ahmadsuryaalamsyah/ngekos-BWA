@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('city_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->text('description');
-            $table->int('price');
+            $table->integer('price');
             $table->text('address');
             $table->timestamps();
         });

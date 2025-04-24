@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bonus extends Model
 {
-    //
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+
+    public function boardingHouse()
+    {
+        return $this->belongsTo(BoardingHouse::class);
+    }
 }
